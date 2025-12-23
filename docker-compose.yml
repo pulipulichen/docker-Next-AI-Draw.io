@@ -1,0 +1,13 @@
+services:
+  next-ai-draw-io:
+    image: ghcr.io/dayuanjiang/next-ai-draw-io:sha-98625dd
+    container_name: next-ai-draw-io
+    ports:
+      - "13000:3000"
+    # environment:
+    #   AI_PROVIDER: gemini
+    #   AI_MODEL: gpt-4o
+    #   OPENAI_API_KEY: your_api_key
+    # restart: unless-stopped
+    env_file:
+      - ./.env
